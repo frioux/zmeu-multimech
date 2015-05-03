@@ -1,0 +1,37 @@
+entity 50.116.28.218
+linkport -1
+hasonotice
+
+nick Gabriela
+login etichetat
+virtual 50.116.28.218
+ircname eroul
+modes +ix-ws
+userfile 50.116.28.218.mif.user
+
+set BANMODES 6
+set OPMODES 6
+set CTIMEOUT 60
+set CDELAY 30
+tog SPY 1
+tog RV 1
+set AAWAY 1
+channel #alibaba 
+set MDL 3
+set MBL 3
+set MKL 3
+set MPL 2
+tog PROT 1
+
+
+server 82.76.255.62 6667 
+server 94.125.182.255 6667 
+server 154.35.175.201 6667 
+server 198.148.91.146 6667 
+server 208.64.123.210 6667 
+server 173.245.201.28 6667 
+server 91.236.182.1 6667 
+server eu.undernet.org 6667 
+server us.undernet.org 6667 
+server ix.undernet.org 6667 
+server irc.undernet.org 6667 

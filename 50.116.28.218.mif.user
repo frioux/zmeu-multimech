@@ -1,0 +1,21 @@
+
+handle		x
+mask		*!*@basarabu.users.undernet.org
+prot		4
+aop
+channel		*
+access		100
+
+handle		x
+mask		*!*@suntzu.users.undernet.org
+prot		4
+aop
+channel		*
+access		100
+
+handle		x
+mask		*!*@vitiusha.users.undernet.org
+prot		4
+aop
+channel		*
+access		100

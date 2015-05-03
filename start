@@ -1,0 +1,46 @@
+#!/bin/bash
+
+if [ $# != 1 ]; then
+	echo "   Zmeu Multimech "
+        echo "Exemplu : ./start chann "
+	echo "P.S : fara diez!"
+        exit;
+fi
+
+
+/sbin/ifconfig | grep -v "inet6" |grep "inet" | tr ':' ' '| awk '{ print $3 }' |grep -v "127.0.0.1" > vhosts
+nrs=`cat vhosts | grep -c .`
+######variabile######
+D=1
+B=./vhosts
+######install######
+echo "   Zmeu Multimech"
+sleep 1
+echo "Am gasit $nrs ip-uri"
+sleep 1
+
+while read line; do
+   ./inst $1 $line
+
+case "$D" in
+"1")
+echo -e "\b\.\c"
+D=2
+;;
+"2")
+echo -e "\b\..\c"
+D=3
+;;
+"3")
+echo -e "\b\...\c"
+D=4
+;;
+"4")
+echo -e "\b\....\c"
+D=1
+;;
+esac
+ done < $B
+echo -e "\bGata"
+./autorun
+./run
